@@ -6,6 +6,11 @@ h1 {
     color: rgb(255, 255, 255);
     font-family: Arial;
   }
+
+h5 {
+    font-size: medium;
+}
+
 #logoDiv {
     height: 50px;
     background-color: black;
@@ -37,4 +42,28 @@ h1 {
     padding-top: 15px;
     padding-bottom: 15px;
     min-height: 45px;
+}
+
+#content.wideContent {
+    min-width: 310px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#content {
+    min-width: 300px;
+    max-width: 845px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-top: 17px;
+    padding-right: 15px;
+    color: #3a5160;
+    line-height: 16px;
+    min-height: 290px;
+}
+
+#content, #header, #footer {
+    padding: 15px;
+    border-width: 1px;
 }
