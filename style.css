@@ -10,15 +10,15 @@ h1 {
 h5 {
     font-size: medium;
 }
-
+/* 
 #logoDiv {
     height: 50px;
     background-color: black;
     background-repeat: no-repeat;
     background-size: 257px 66px;
-}
+} */
 
-#logoDiv, #logoDivSetup, #logoDivWhite, #copyrightDiv, #dialog {
+/*logoDiv,*/ #logoDivSetup, #logoDivWhite, #copyrightDiv, #dialog {
     margin-left: auto;
     margin-right: auto;
 }
@@ -66,4 +66,14 @@ h5 {
 #content, #header, #footer {
     padding: 15px;
     border-width: 1px;
+}
+
+#top5{
+    padding-top: 5%;
+}
+
+#container{
+    padding-top: 10%;
+    color:white;
+    font-family: Arial;
 }
