@@ -68,12 +68,16 @@ h5 {
     border-width: 1px;
 }
 
-#top5{
-    padding-top: 5%;
-}
-
 #container{
     padding-top: 10%;
     color:white;
     font-family: Arial;
+    text-align: center;
+    font-size: 175%;
 }
+.center {
+    margin: auto;
+    border: 5px solid #212121;
+    padding: 0px;
+    border-radius: 1%;
+  }
