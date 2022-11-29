@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GameInfo - Homepage</title>
+    <link rel="icon" type="image/x-icon" href="icons8-game-controller-30.png">
+</head>
+
+<body>
+    <header class="header-wrapper animate__animated faster sticky animate__fadeInDown celtra-reveal-header-sticky">
+        <div class="row align-items-center header-inner mx-auto" id="header-elements">
+            <div class="px-0 pe-md-3 col-auto">
+                <a class="logo" href="main.html" title="GameInfo">
+                    <h2><b>GameInfo</b></h2>
+                </a>
+            </div>
+            <div class="col col-md-auto px-0">
+                <div class="links">
+                    <ul class="static-menu">
+                        <li class="menu link active">
+                            <button class="menu-toggle hamburger hamburger--3dx" type="button">
+                                <span class="hamburger-box">
+                                    <span class="hamburger-inner"></span>
+                                </span>
+                            </button>
+                        </li>
+                    </ul>
+                    <ul class="main-navigation">
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="review.html">Reviews</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-auto ms-auto ps-0 ps-md-3 pe-0">
+            </div>
+    </header>
+    <div class="row container-fluid container-overlay align-items-center d-none d-md-flex">
+            <div class="header-images">
+
+            <div class="mySlides crop">
+            <img src="https://kursors.lv/wp-content/uploads/2021/10/store_home_share.jpg">
+            </div>
+            
+            <div class="mySlides crop">
+            <img src="https://wallpaperaccess.com/full/1493034.jpg">
+            </div>
+            
+            <div class="mySlides crop">
+            <img src="https://cdn2.unrealengine.com/Diesel%2Fblog%2Fseptember-store-feature-update%2FEGS_Social_EGS_Evergreen_1920x1080-1920x1080-7a0008b94b9ae31eef4869c177acf7b51f04273d.jpg">
+            </div>
+            
+            </div>
+            <br>
+            
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+            <span class="dot"></span> 
+        </div>
+
+    <div class="container">
+        <div id="main" class="row pt-3">
+            <div class="col-12"> 
+                  <div class="row">
+                    <div class="leftcolumn">
+                      <div class="card">
+                        <h2>TITLE HEADING</h2>
+                        <h5>Title description, Dec 7, 2017</h5>
+                        <div class="fakeimg" style="height:200px;">Image</div>
+                        <p>Some text..</p>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                      </div>
+                      <div class="card">
+                        <h2>TITLE HEADING</h2>
+                        <h5>Title description, Sep 2, 2017</h5>
+                        <div class="fakeimg" style="height:200px;">Image</div>
+                        <p>Some text..</p>
+                        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-12">
+                
+            </div>
+        </div>
+        <div id="nn_skinl" style="position: absolute; top: 480px;"></div>
+        <div id="nn_skinr" style="position: absolute; top: 480px;"></div>
+    </div>
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://www.exophase.com/assets/dist/app.af6289d7.css">
+    <link rel="stylesheet" href=".css">
+    <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 5000); // Change image every 10 seconds
+        }
+        </script>
+</body>
+
+<footer>
+    <div class="row wrap">
+        <div class="col-12 col-md-4 col-lg-3">
+            <!-- <span>Steam data provided by <a rel="noopener" href="http://steampowered.com/">Valve</a></span> -->
+        </div>
+        <div class="col-12 col-md-4 col-lg-2 links-list">
+            <!-- <span><strong>Quick Links</strong></span>
+            <a href="">FAQ</a>
+            <a href="">Rules</a>
+            <a href="">About</a>
+            <a href="">Contact</a> -->
+        </div>
+        <div class="col-12 col-md-6 col-lg-4">
+            <span><strong>Database Stats</strong></span>
+            <!-- <span>
+                <mark>4,365,224</mark>
+            </span> -->
+            <span>
+                <mark>4</mark> Games
+            </span>
+        </div>
+    </div>
+</footer>
+
+</html>
