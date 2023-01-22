@@ -59,332 +59,38 @@
         
     <div id="app" data-v-app="">
         <div class="container">
-            <div class="row section-fill archive-selection mb-3">
-                <div class="col">
-                    <div class="filter">
-                        <ul class="formats">
-                            <li>
-                                <button class='btn' onclick="filterSelection('all')">All</button>
-                                <button class='btn' onclick="filterSelection('steam')">Steam</button>
-                                <button class='btn' onclick="filterSelection('android')">Google Play</button>
-                                <button class='btn' onclick="filterSelection('epic')">Epic</button>
-                        </ul>
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-                    </div>
-                </div>
-            </div>
             <div class="row game-archive">
                 <div style="text-align: center; margin-left: auto; margin-right: auto;">
-                </div>
-
-                <form class="archive-options search-act">
-                    <div class="row align-items-center justify-content-between">
-                        <div class="game-search col-auto">
-                            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for game name.." title="Type in a name">
-                        </div>
-                        <!-- <div class="col col-md-6 text-end"><select class="form-select form-control">
-                                <option value="added">Date Added (Default)</option>
-                                 <option value="exp">Exophase Points (EXP)</option>
-                                <option value="exp-ratio">EXP Ratio</option>
-                                <option value="awards">Achievement Count</option>
-                                <option value="points">Points</option>
-                                <option value="players">Players</option>
-                                <option value="completed">Completed</option>
-                            </select></div> -->
-
-                        <div class="col-12 search-container">
-                            <div class="search-games">
-                                <div class="input-group"><input type="text" class="form-control" name="q"
-                                        placeholder="Search game list..."></div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-                <div class="component_Xwt9V">
-                    <div class="list-container">
-                        <!-- <div class="center">
-                            <nav aria-label="Page navigation">
-                                <ul class="p-4 pagination justify-content-center">
-                                    <li class="page-item"><a href="/games/page/1/"
-                                            class="page-link page-numbers current">1</a></li>
-                                    <li class="page-item"><a href="/games/page/2/" class="page-link page-numbers">2</a>
-                                    </li>
-                                    <li class="page-item"><a href="/games/page/3/" class="page-link page-numbers">3</a>
-                                    </li>
-                                    <li class="page-item"><span class="page-link page-numbers dots">…</span></li>
-                                    <li class="page-item"><a href="/games/page/552/"
-                                            class="page-link page-numbers">552</a></li>
-                                    <li class="page-item"><a href="/games/page/2/" class="page-link page-numbers">»</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div> -->
-
-                        <ul class="list-unordered-base" id="myUL"> <!--List of Games-->
-                            <div class="filterDiv steam">
-                            <li class="row gx-0 p-3 align-items-center steam"> <!--Game: Anihance-->
-                                <div class="col-auto ps-0 pe-2 me-3 col-image">
-                                    <div class="box image"><img width="127" height="70"
-                                            src="https://cdn.cloudflare.steamstatic.com/steam/apps/1979340/header.jpg?t=1669114826">
-                                    </div>
-                                </div>
-                                <div class="col snippet">
-                                    <h3><a href="Anihance.html">Anihance</a>
-                                    </h3>
-                                    <div class="platforms">
-                                        <div class="steam-profile-pf inline-pf"><i
-                                                class="exo-icon-service-steam exo-icon icon-collection-services"></i><span>Steam</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-xl ms-auto me-auto me-lg-0 pt-2 pb-2 game-stats"> <!--Game Stats-->
-                                    <div class="row justify-content-md-center justify-content-lg-end">
-                                        <div class="col-4 text-center align-self-end inline-counters">
-                                            <span><span>Yes</span> Achievements</span>
-                                        </div>
-                                        <div class="col text-center align-self-end inline-counters">
-                                            <span><span>€7.99</span> Price </span>
-                                        </div>
-                                        <div class="col text-center align-self-end inline-counters">
-                                            <span><span><img src="https://aux2.iconspalace.com/uploads/windows-logo-icon-32.png" class="win"></span> Platform </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="filterDiv steam android">
-                            <li class="row gx-0 p-3 align-items-center steam"> <!--Game: Hero Siege-->
-                                <div class="col-auto ps-0 pe-2 me-3 col-image">
-                                    <div class="box image"><img width="127" height="70"
-                                            src="https://cdn.cloudflare.steamstatic.com/steam/apps/269210/header.jpg?t=1669637809">
-                                    </div>
-                                </div>
-                                <div class="col snippet">
-                                    <h3><a href="Hero Siege.html">Hero Siege</a>
-                                    </h3>
-                                    <div class="platforms">
-                                        <div class="steam-profile-pf inline-pf">
-                                            <i class="exo-icon-service-steam exo-icon icon-collection-services"></i><span>Steam</span>
-                                        </div>
-                                        <div class="android-profile-pf inline-pf">
-                                            <i class="exo-icon-service-android exo-icon icon-collection-services"></i><span>Google Play</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-xl ms-auto me-auto me-lg-0 pt-2 pb-2 game-stats"> <!--Game Stats-->
-                                    <div class="row justify-content-md-center justify-content-lg-end">
-                                        <div class="col-4 text-center align-self-end inline-counters">
-                                            <span><span>Yes</span> Achievements</span>
-                                        </div>
-                                        <div class="col text-center align-self-end inline-counters">
-                                            <span><span>€6.99 | €9.99 </span> Prices </span>
-                                        </div>
-                                        <div class="col text-center align-self-end inline-counters">
-                                            <span><span><img src="https://aux2.iconspalace.com/uploads/windows-logo-icon-32.png"class="win"><img src=https://cdn-icons-png.flaticon.com/32/226/226770.png>
-                                            <img src="https://cdn-icons-png.flaticon.com/32/2/2235.png"><img src="https://cdn-icons-png.flaticon.com/32/518/518713.png"></span>
-                                            Platforms </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="filterDiv steam">
-                            <li class="row gx-0 p-3 align-items-center steam"> <!--Game: Zero-K-->
-                                <div class="col-auto ps-0 pe-2 me-3 col-image">
-                                    <div class="box image"><img width="127" height="70"
-                                            src="https://cdn.cloudflare.steamstatic.com/steam/apps/334920/header.jpg?t=1667932138">
-                                    </div>
-                                </div>
-                                <div class="col snippet">
-                                    <h3><a href="#">Zero-K</a>
-                                    </h3>
-                                    <div class="platforms">
-                                        <div class="steam-profile-pf inline-pf"><i
-                                                class="exo-icon-service-steam exo-icon icon-collection-services"></i><span>Steam</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-xl ms-auto me-auto me-lg-0 pt-2 pb-2 game-stats"> <!--Game Stats-->
-                                    <div class="row justify-content-md-center justify-content-lg-end">
-                                        <div class="col-4 text-center align-self-end inline-counters">
-                                            <span><span>No</span> Achievements</span>
-                                        </div>
-                                        <div class="col text-center align-self-end inline-counters">
-                                            <span><span>Free</span> Price </span>
-                                        </div>
-                                        <div class="col text-center align-self-end inline-counters">
-                                            <span><span><img src="https://aux2.iconspalace.com/uploads/windows-logo-icon-32.png"class="win">
-                                                <img src="https://cdn-icons-png.flaticon.com/32/518/518713.png">
-                                            </span> Platforms </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-                        <div class="filterDiv steam">
-                            <li class="row gx-0 p-3 align-items-center steam"> <!--Game: MORDHAU-->
-                                <div class="col-auto ps-0 pe-2 me-3 col-image">
-                                    <div class="box image"><img width="127" height="70"
-                                            src="https://cdn.cloudflare.steamstatic.com/steam/apps/629760/header.jpg?t=1666682976">
-                                    </div>
-                                </div>
-                                <div class="col snippet">
-                                    <h3><a href="#">MORDHAU</a>
-                                    </h3>
-                                    <div class="platforms">
-                                        <div class="steam-profile-pf inline-pf"><i
-                                                class="exo-icon-service-steam exo-icon icon-collection-services"></i><span>Steam</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-12 col-xl ms-auto me-auto me-lg-0 pt-2 pb-2 game-stats"> <!--Game Stats-->
-                                    <div class="row justify-content-md-center justify-content-lg-end">
-                                        <div class="col-4 text-center align-self-end inline-counters">
-                                            <span><span>Yes</span> Achievements</span>
-                                        </div>
-                                        <div class="col text-center align-self-end inline-counters">
-                                            <span><span>€28.99</span> Price </span>
-                                        </div>
-                                        <div class="col text-center align-self-end inline-counters">
-                                            <span><span><img
-                                                        src="https://aux2.iconspalace.com/uploads/windows-logo-icon-32.png"
-                                                        class="win"></span> Platform </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </div>
-
-                        </ul>
-                        <!--Search Filer -->            
-                        <script>
-                            function myFunction() {
-                                var input, filter, ul, li, a, i, txtValue;
-                                input = document.getElementById("myInput");
-                                filter = input.value.toUpperCase();
-                                ul = document.getElementById("myUL");
-                                li = ul.getElementsByTagName("li");
-                                for (i = 0; i < li.length; i++) {
-                                    a = li[i].getElementsByTagName("a")[0];
-                                    txtValue = a.textContent || a.innerText;
-                                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                                        li[i].style.display = "";
-                                    } else {
-                                        li[i].style.display = "none";
-                                    }
-                                }
-                            }
-                        </script>
-
-                        <!--Button Filer -->            
-                        <script>
-                            filterSelection("all")
-                            function filterSelection(c) {
-                                var x, i;
-                                x = document.getElementsByClassName("filterDiv");
-                                if (c == "all") c = "";
-                                for (i = 0; i < x.length; i++) {
-                                    w3RemoveClass(x[i], "show");
-                                    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-                                }
-                            }
-
-                            function w3AddClass(element, name) {
-                                var i, arr1, arr2;
-                                arr1 = element.className.split(" ");
-                                arr2 = name.split(" ");
-                                for (i = 0; i < arr2.length; i++) {
-                                    if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
-                                }
-                            }
-
-                            function w3RemoveClass(element, name) {
-                                var i, arr1, arr2;
-                                arr1 = element.className.split(" ");
-                                arr2 = name.split(" ");
-                                for (i = 0; i < arr2.length; i++) {
-                                    while (arr1.indexOf(arr2[i]) > -1) {
-                                        arr1.splice(arr1.indexOf(arr2[i]), 1);
-                                    }
-                                }
-                                element.className = arr1.join(" ");
-                            }
-
-                            // Add active class to the current button (highlight it)
-                            var btnContainer = document.getElementById("myBtnContainer");
-                            var btns = btnContainer.getElementsByClassName("btn");
-                            for (var i = 0; i < btns.length; i++) {
-                                btns[i].addEventListener("click", function () {
-                                    var current = document.getElementsByClassName("active");
-                                    current[0].className = current[0].className.replace(" active", "");
-                                    this.className += " active";
-                                });
-                            }
-                        </script>
-
-                        <!-- <div class="center">
-                            <nav aria-label="Page navigation">
-                                <ul class="p-4 pagination justify-content-center">
-                                    <li class="page-item"><a href="/games/page/1/"
-                                            class="page-link page-numbers current">1</a></li>
-                                    <li class="page-item"><a href="/games/page/2/" class="page-link page-numbers">2</a>
-                                    </li>
-                                    <li class="page-item"><a href="/games/page/3/" class="page-link page-numbers">3</a>
-                                    </li>
-                                    <li class="page-item"><span class="page-link page-numbers dots">…</span></li>
-                                    <li class="page-item"><a href="/games/page/552/"
-                                            class="page-link page-numbers">552</a></li>
-                                    <li class="page-item"><a href="/games/page/2/" class="page-link page-numbers">»</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div> -->
-                    </div>
+                    <div id="ragic_webview"></div>
+<script>
+    var ragic_url = 'eu3.ragic.com/24hours/ragicadministration/1';
+    var ragic_feature = 'twoRow';
+    var ragic_embedtype = '';
+    var exactMatch = true;
+    var pfv = [];
+    
+    var applyDefaultView = false;
+    
+    var listData = false;
+    var autoSearch = false;
+    var noSearchBar = false;
+    
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function () {
+        var rq = document.createElement('script');
+        rq.type = 'text/javascript';
+        rq.async = true;
+        rq.src = "https://eu3.ragic.com/intl/common/load.js";
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(rq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://www.ragic.com/?ref_noscript">Online database form by Ragic.</a></noscript>
+<a href="https://www.ragic.com" id="ragic-link">online database form by <span class="logo-ragic">Ragic</span></a>
+    
                 </div>
             </div>
+             
+
             <div style="text-align: center; margin-left: auto; margin-right: auto;">
             </div>
             <div id="nn_skinl" style="position: absolute; top: 480px;"></div>
